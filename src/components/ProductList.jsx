@@ -58,7 +58,9 @@ const ProductList = ({ products }) => {
       </div>
       <div className="grid grid-cols-3 gap-4">
         {filteredProducts.map((product) => (
+          <a href = {` ./product/${product.id}`} key={product.id}>
           <ProductCard key={product.id} product={product} />
+          </a>
         ))}
       </div>
     </div>
